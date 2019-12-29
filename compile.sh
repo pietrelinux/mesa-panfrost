@@ -13,3 +13,11 @@ cd mesa
 meson -Ddri-drivers= -Dvulkan-drivers= -Dgallium-drivers=panfrost,kmsro -Dlibunwind=false -Dplatforms=x11,drm,wayland,surfaceless -Dprefix=/usr build/
 ninja -C build/
 sudo ninja -C build/ install
+cd ..
+git clone https://github.com/SDL-mirror/SDL.git
+cd SDL
+mkdir build
+cd build
+cmake ../  
+make 
+sudo make install
