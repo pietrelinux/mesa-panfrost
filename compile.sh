@@ -10,5 +10,6 @@ sudo -E ninja -C build install
 cd ..
 git clone git://anongit.freedesktop.org/mesa/mesa
 cd mesa
-meson -Ddri-drivers= -Dvulkan-drivers= -Dgallium-drivers=panfrost,kmsro -Dlibunwind=false -Dplatforms=x11,drm,wayland,surfaceless -Dprefix=/usr build/ninja -C build/
+meson -Ddri-drivers= -Dvulkan-drivers= -Dgallium-drivers=panfrost,kmsro -Dlibunwind=false -Dplatforms=x11,drm,wayland,surfaceless -Dprefix=/usr build/
+ninja -C build/
 sudo ninja -C build/ install
